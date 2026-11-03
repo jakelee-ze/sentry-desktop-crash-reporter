@@ -74,6 +74,7 @@
 
         <UnoXamlResourcesTrimming>false</UnoXamlResourcesTrimming>
         <PublishTrimmed>true</PublishTrimmed>
+        <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
         <publishSingleFile>true</publishSingleFile>
         <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
         <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
