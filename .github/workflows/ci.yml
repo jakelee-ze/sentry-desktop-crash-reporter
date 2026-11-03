@@ -110,6 +110,19 @@ jobs:
         shell: pwsh
         run: dotnet publish -f net10.0-desktop -r ${{ matrix.rid }} ./Sentry.CrashReporter/Sentry.CrashReporter.csproj -o ./build -bl:./build.binlog
 
+      - name: Rename executables
+        shell: bash
+        run: |
+          if [[ "$RUNNER_OS" == "Windows" ]]; then
+            mv ./build/Sentry.CrashReporter.exe "./build/z-weave crash reporter.exe"
+          elif [[ "$RUNNER_OS" == "macOS" ]]; then
+            app="./build/z-weave crash reporter.app"
+            mv "$app/Contents/MacOS/Sentry.CrashReporter" "$app/Contents/MacOS/z-weave crash reporter"
+            plutil -replace CFBundleExecutable -string "z-weave crash reporter" "$app/Contents/Info.plist"
+            ls -la "$app/Contents/MacOS" | grep -v "\.dylib$"
+            plutil -p "$app/Contents/Info.plist"
+          fi
+
       - name: Sign and notarize .app (macOS)
         if: ${{ runner.os == 'macOS' && env.KEYCHAIN_NAME && env.APPLE_API_KEY_P8_BASE64 }}
         shell: bash
