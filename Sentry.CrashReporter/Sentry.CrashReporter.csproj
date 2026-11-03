@@ -8,16 +8,16 @@
         <UseSystemResourceKeys>false</UseSystemResourceKeys>
 
         <!-- Display name -->
-        <ApplicationTitle>Sentry Crash Reporter</ApplicationTitle>
+        <ApplicationTitle>z-weave crash reporter</ApplicationTitle>
         <!-- App Identifier -->
-        <ApplicationId>io.sentry.CrashReporter</ApplicationId>
+        <ApplicationId>com.z-emotion.z-weave.crash-reporter</ApplicationId>
         <!-- Versions -->
         <ApplicationDisplayVersion>0.3.4</ApplicationDisplayVersion>
         <ApplicationVersion>1</ApplicationVersion>
         <!-- Package Publisher -->
-        <ApplicationPublisher>O=Sentry.CrashReporter</ApplicationPublisher>
+        <ApplicationPublisher>O=z-emotion</ApplicationPublisher>
         <!-- Package Description -->
-        <Description>Sentry.CrashReporter powered by Uno Platform.</Description>
+        <Description>z-weave crash reporter</Description>
 
         <!--
           UnoFeatures let's you quickly add and manage implicit package references based on the features you want to use.
@@ -85,6 +85,12 @@
         <PublishSingleFile>false</PublishSingleFile>
         <UnoMacOSCustomInfoPlist>Platforms/Desktop/Info.plist</UnoMacOSCustomInfoPlist>
     </PropertyGroup>
+
+    <ItemGroup>
+        <!-- Single-file app icon: used as-is for the window/taskbar (.ico) and Dock (.icns) icons.
+             Without this the SDK's implicit UnoIcon requires both icon.svg and icon_foreground.svg. -->
+        <UnoIcon Include="Assets\Icons\icon.svg" />
+    </ItemGroup>
 
     <ItemGroup>
         <!-- Known cultures to include for text localization -->
