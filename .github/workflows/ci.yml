@@ -121,7 +121,7 @@ jobs:
           trap 'rm -f "$KEY_PATH"' EXIT
 
           ./.github/scripts/sign-macos.sh \
-            --app "build/Sentry Crash Reporter.app" \
+            --app "build/z-weave crash reporter.app" \
             --signing-identity "${{ vars.APPLE_NOTARIZATION_SIGNING_IDENTITY }}" \
             --api-key-path "$KEY_PATH" \
             --api-key-id "${{ vars.APPLE_API_KEY_ID }}" \
@@ -138,7 +138,7 @@ jobs:
           if [[ "$RUNNER_OS" == "Windows" ]]; then
             (cd ./build && 7z a -tzip "../artifacts/${{ steps.vars.outputs.artifact }}.zip" .)
           elif [[ "$RUNNER_OS" == "macOS" ]]; then
-            tar czf "./artifacts/${{ steps.vars.outputs.artifact }}.tar.gz" -C ./build "Sentry Crash Reporter.app"
+            tar czf "./artifacts/${{ steps.vars.outputs.artifact }}.tar.gz" -C ./build "z-weave crash reporter.app"
           else
             tar czf "./artifacts/${{ steps.vars.outputs.artifact }}.tar.gz" -C ./build .
           fi
