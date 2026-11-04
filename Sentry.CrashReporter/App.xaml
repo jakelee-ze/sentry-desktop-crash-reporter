@@ -10,13 +10,13 @@
                 <ResourceDictionary Source="ms-appx:///Styles/Images.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
-            <Color x:Key="SystemAccentColor">#8866FF</Color>
-            <Color x:Key="SystemAccentColorLight1">#9C7FFF</Color>
-            <Color x:Key="SystemAccentColorLight2">#7554FF</Color>
-            <Color x:Key="SystemAccentColorLight3">#B08CFF</Color>
-            <Color x:Key="SystemAccentColorDark1">#7554FF</Color>
-            <Color x:Key="SystemAccentColorDark2">#5A3FCC</Color>
-            <Color x:Key="SystemAccentColorDark3">#3F2B99</Color>
+            <Color x:Key="SystemAccentColor">#4866ED</Color>
+            <Color x:Key="SystemAccentColorLight1">#5A75EE</Color>
+            <Color x:Key="SystemAccentColorLight2">#6C84F0</Color>
+            <Color x:Key="SystemAccentColorLight3">#7E93F2</Color>
+            <Color x:Key="SystemAccentColorDark1">#405BD5</Color>
+            <Color x:Key="SystemAccentColorDark2">#3951BD</Color>
+            <Color x:Key="SystemAccentColorDark3">#2E429A</Color>
 
             <SolidColorBrush x:Key="SystemAccentColorBrush" Color="{StaticResource SystemAccentColor}" />
             <SolidColorBrush x:Key="AccentButtonForeground" Color="#FFFFFF" />
@@ -24,12 +24,12 @@
             <SolidColorBrush x:Key="AccentButtonForegroundPressed" Color="#FFFFFF" Opacity="0.9" />
             <SolidColorBrush x:Key="AccentButtonForegroundDisabled" Color="#FFFFFF" Opacity="0.75" />
 
-            <x:String x:Key="WindowTitle">Sentry Crash Reporter</x:String>
+            <x:String x:Key="WindowTitle">z-weave crash reporter</x:String>
             <x:Boolean x:Key="WindowClosable">True</x:Boolean>
-            <x:String x:Key="HeaderText">Report a Bug</x:String>
-            <x:String x:Key="HeaderDescription" xml:space="preserve"> </x:String>
-            <x:String x:Key="CancelButton">Cancel</x:String>
-            <x:String x:Key="SubmitButton">Submit</x:String>
+            <x:String x:Key="HeaderText">z-weave quit unexpectedly</x:String>
+            <x:String x:Key="HeaderDescription">Sending this report helps us fix the problem. It contains a memory snapshot of the crash, the application log, and basic system information. It does not include your garment files. Nothing is sent unless you click Send Report.</x:String>
+            <x:String x:Key="CancelButton">Don't Send</x:String>
+            <x:String x:Key="SubmitButton">Send Report</x:String>
 
             <!-- ReSharper disable Xaml.LanguageLevel -->
             <x:Double x:Key="ExpanderChevronButtonSize">20</x:Double>

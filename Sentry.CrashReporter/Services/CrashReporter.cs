@@ -184,7 +184,7 @@ public class CrashReporter(
         }
     }
 
-    public CacheKeep EffectiveCacheKeep => (_cache.CacheKeep ?? _config.CacheKeep ?? CacheKeep.Offline).Normalize();
+    public CacheKeep EffectiveCacheKeep => (_cache.CacheKeep ?? _config.CacheKeep ?? CacheKeep.None).Normalize();
 
     private async Task<string?> CacheAsync(Envelope envelope, CacheKeep cacheKeep, CancellationToken cancellationToken)
     {

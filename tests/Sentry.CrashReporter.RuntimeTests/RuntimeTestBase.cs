@@ -43,7 +43,7 @@ public class RuntimeTestBase
         var mockWindow = new Mock<IWindowService>();
         var cacheKeep = new MemoryCacheService();
         mockReporter.Setup(x => x.EffectiveCacheKeep)
-            .Returns(() => (cacheKeep.CacheKeep ?? appConfig.CacheKeep ?? CacheKeep.Offline).Normalize());
+            .Returns(() => (cacheKeep.CacheKeep ?? appConfig.CacheKeep ?? CacheKeep.None).Normalize());
         var mockClipboard = new Mock<IClipboardService>();
         var mockFilePicker = new Mock<IFilePickerService>();
 
