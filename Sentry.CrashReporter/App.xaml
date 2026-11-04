@@ -26,8 +26,8 @@
 
             <x:String x:Key="WindowTitle">z-weave crash reporter</x:String>
             <x:Boolean x:Key="WindowClosable">True</x:Boolean>
-            <x:String x:Key="HeaderText">z-weave quit unexpectedly</x:String>
-            <x:String x:Key="HeaderDescription">Sending this report helps us fix the problem. It contains a memory snapshot of the crash, the application log, and basic system information. It does not include your garment files. Nothing is sent unless you click Send Report.</x:String>
+            <x:String x:Key="HeaderText">z-weave has stopped working</x:String>
+            <x:String x:Key="HeaderDescription">We are sorry for the inconvenience. Please send this report to help us fix the problem. It is used only to improve z-weave.</x:String>
             <x:String x:Key="CancelButton">Don't Send</x:String>
             <x:String x:Key="SubmitButton">Send Report</x:String>
 
