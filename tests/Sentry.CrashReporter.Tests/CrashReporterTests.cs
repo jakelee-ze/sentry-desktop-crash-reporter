@@ -9,7 +9,7 @@ public class CrashReporterTests
     public void SetUp()
     {
         var services = new ServiceCollection();
-        services.AddSingleton(new AppConfig());
+        services.AddSingleton(new AppConfig { CacheKeep = CacheKeep.Offline });
         services.AddSingleton<ICacheService>(new MemoryCacheService());
         App.Services = services.BuildServiceProvider();
     }
