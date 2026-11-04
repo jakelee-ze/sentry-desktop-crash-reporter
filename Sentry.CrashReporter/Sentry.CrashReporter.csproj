@@ -92,6 +92,10 @@
         <UnoIcon Include="Assets\Icons\icon.svg" />
     </ItemGroup>
 
+    <PropertyGroup>
+        <ApplicationIcon>Assets\Icons\icon.ico</ApplicationIcon>
+    </PropertyGroup>
+
     <ItemGroup>
         <!-- Known cultures to include for text localization -->
         <UnoSupportedLanguage Include="en-US" />
