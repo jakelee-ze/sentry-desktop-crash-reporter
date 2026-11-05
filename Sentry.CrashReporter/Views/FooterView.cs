@@ -291,7 +291,7 @@ public sealed class FooterView : ReactiveUserControl<FooterViewModel>
                     .Width(20)
                     .Height(20))
                 .IsTextSelectionEnabled(false)
-                .Text("Please wait. Submitting the report..."),
+                .Text("Please wait. Sending the report..."),
             FooterStatus.Error => new IconLabel(FA.CircleExclamation)
                 .TextWrapping(TextWrapping.Wrap)
                 .VerticalAlignment(VerticalAlignment.Center)
